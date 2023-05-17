@@ -1,0 +1,12 @@
+[Unit]
+Description=news_push_backend
+After=network.target
+
+[Service]
+User=<user>
+WorkingDirectory=/path/to/flask-website-test/running_as_a_systemctl_service/
+ExecStart=/path/to/python3 /path/to/flask-website-test/running_as_a_systemctl_service/backend.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
