@@ -6,7 +6,7 @@ from flask import render_template
 
 
 
-app = Flask(__name__)
+webapp = Flask(__name__)
 
 def get_path():
     for i in range(len(__file__)):
@@ -14,7 +14,7 @@ def get_path():
             return(str(__file__[0:-i]))
     return("")
 
-@app.route("/")
+@webapp.route("/")
 def index():
     idsToShow = []
     for line in csv.reader(open(get_path()+"sorted_keys.csv", "r")):
@@ -24,4 +24,4 @@ def index():
     data = json.load(open(get_path()+"data.json", "r"))
     return render_template("index.html", idsToShow=idsToShow, allArticles=data)
 
-app.run()
+webapp.run()
