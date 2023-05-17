@@ -24,4 +24,5 @@ def index():
     data = json.load(open(get_path()+"data.json", "r"))
     return render_template("index.html", idsToShow=idsToShow, allArticles=data)
 
-webapp.run()
+if __name__ == '__main__':
+    webapp.run()
