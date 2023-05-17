@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 User=<user>
-WorkingDirectory=/path/to/flask-website-test/running_as_a_systemctl_service/
-ExecStart=/path/to/gunicorn webapp:webapp -c /path/to/flask-website-test/running_as_a_systemctl_service/gunicorn_config.py
+WorkingDirectory=/path/to/Netzwerk-Politk-Push/running_as_a_systemctl_service/
+ExecStart=/path/to/gunicorn webapp:webapp -c /path/to/Netzwerk-Politk-Push/running_as_a_systemctl_service/gunicorn_config.py
 Restart=always
 
 [Install]
